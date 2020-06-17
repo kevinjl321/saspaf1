@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: borderbox;
+}
+
+:root{
+    --nav-color: rgb(4, 18, 59);
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color:var(--nav-color);
+    font-family: "Montserrat", sans-serif;
+}
+
+.logo{
+    color: rgb(255, 255, 255);
+    letter-spacing: 5px;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.nav-links a{
+    color: white;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.nav-links li{
+    list-style: none;
+}
+
+.burger div{
+    width: 30px; 
+    height: 5px;
+    background-color: white;
+    margin: 3px;
+    transition: all 0.3s ease;
+}
+
+.burger{display:none; cursor: pointer;}
+
+@media screen and (max-width: 1024px){
+    .nav-links{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: var(--nav-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition:transform 0.5s ease-in;
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .burger{
+        display: block;
+    }
+}
+
+.nav-active{
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2{
+    opacity: 0;
+}
+
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px, -6px);
+
+}
+
+body{
+    background-color: rgb(223, 219, 219);
+}
+
+#message{
+    font-family: "Montserrat", sans-serif;
+    font-size: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30vh;
+    width: 50vw;
+}
