@@ -7,12 +7,13 @@
         <link rel = "stylesheet" href = "styles.css">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+        <link rel="icon" href="logo.png">
         <title>SASPAF</title>
     </head>
 
     <nav>
         <div class = "logo">
-            <h4>SASPAF</h4>
+            <img src = "logo.png" height = 100px width = 250px>
         </div>
         <ul class = "nav-links">
             <li>
@@ -36,18 +37,44 @@
     </nav>
 
     <body>
+
+      <section class = "join-us">
+          <div class = "join-container">
+            <div class = "join-us">
+              <h1>Join Us!</h1>
+              <br>
+              <p>Sign up to join our team! We have periodic volunteer activities and events that you can participate in. 
+                There are also so many other ways to help, so join us!</p>
+
+              <form action = "https://getform.io/f/4b5410d2-75e8-45f7-bb9d-fdcc116e28dc" method = "POST" class = "join" >
+                <input type = "text" id = "fname" name = "fname" placeholder= "First Name" required>
+                <input type = "text" id = "lname" name = "lname" placeholder = "Last Name" required>
+                <input type = "text" id = "email" name = "email" placeholder = "Email Address" required>
+                <input type = "text" id = "pnumber" name = "phone-number" placeholder = "Phone Number(Optional)">
+                <div id = "checkbox">
+                  <input type = "checkbox" id = "text-messages" name = "text-messages">
+                  <label for = "text-messages">Opt-in for text messages?</label>
+                </div>
+                <input type = "submit" id = "submit" value = "Sign me up!">
+              </form>
+            </div>
+
+          </div>
+      </section>
+
       <footer>
         <div class="footer-container">
           <div class="left-col">
-            <img src="logo.png" alt="" class="footer-logo">
+            <img class = "footer-logo" src="logo.png" alt="" class="footer-logo">
             <div class="social-media">
               <a href="#"><i class="fab fa-facebook-f"></i></a>
               <a href="#"><i class="fab fa-twitter"></i></a>
               <a href="#"><i class="fab fa-instagram"></i></a>
               <a href="#"><i class="fab fa-youtube"></i></a>
               <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><img src = "gnonprof.png" height = 25px width = 30px;></a>
             </div>
-            <p class="rights-text">&copy 2020 SASPAF<br> Designed and programmed from scratch by <a href = "https://www.github.com/kevinjl321">Kevin Lan</a><br></p>
+            <p class="rights-text">&copy 2020 SASPAF<br> Designed and developed by <a href = "https://www.github.com/kevinjl321">Kevin Lan</a><br></p>
           </div>
   
           <div class="right-col">

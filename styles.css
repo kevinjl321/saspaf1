@@ -9,9 +9,22 @@ html, body{
     font-family: "Montserrat", sans-serif;
     margin: auto;
 }
-:root{
-    --nav-color: rgb(0, 0, 0);
+
+.logo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
+:root{
+    --nav-color: rgb(236, 78, 78);
+}
+
+section{
+  padding: 50px 50px 50px 50px
+}
+
 
 nav{
     display: flex;
@@ -20,13 +33,6 @@ nav{
     min-height: 8vh;
     background-color:var(--nav-color);
     font-family: "Montserrat", sans-serif;
-}
-
-.logo{
-    color: rgb(255, 255, 255);
-    letter-spacing: 5px;
-    font-size: 25px;
-    text-transform: uppercase;
 }
 
 .nav-links{
@@ -87,7 +93,11 @@ nav{
     .burger{
         display: block;
     }
-}
+
+    .burger div{
+      max-height: 10vh;
+    }
+  }
 
 .nav-active{
     transform: translateX(0%);
@@ -140,7 +150,8 @@ footer{
     padding: 30px 0;
     bottom: 0;
     width: 100%;
-    position: absolute;
+    position: fixed;
+    max-height: 20vh;
   }
   
   .footer-container{
@@ -151,6 +162,7 @@ footer{
     flex-shrink: 0;
     justify-content: space-around;
     align-items: center;
+    max-height: 20vh;
   }
   
   .footer-logo{
@@ -224,15 +236,14 @@ footer{
   @media screen and (max-width:960px) {
     .footer-container{
       max-width: 600px;
+      max-height: 100px;
     }
     .right-col{
-      width: 100%;
-      margin-bottom: 60px;
+      display: none;
     }
   
-    .left-col{
-      width: 100%;
-      text-align: center;
+    .left-col .footer-logo{
+      display: none;
     }
   }
 
@@ -242,4 +253,24 @@ footer{
       width: 100%;
       margin-top: 20px;
       }
+  }
+
+  .join-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+  }
+
+  .join-us{
+    flex-direction: column;
+    align-items: left;
+  }
+
+  .join{
+    display: flex;
+    flex-direction: column;
+  }
+
+  #checkbox{
+    flex-direction: row;
   }
