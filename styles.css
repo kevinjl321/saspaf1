@@ -1,31 +1,29 @@
+/*basics + animations*/
 *{
     margin: 0;
     padding: 0;
     box-sizing: borderbox;
 }
-
+:root{
+  --nav-color: rgb(236, 78, 78);
+}
 html, body{
     overflow-x: hidden;
     font-family: "Montserrat", sans-serif;
     margin: auto;
 }
-
-.logo{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+@keyframes navLinkFade{
+  from{
+      opacity: 0;
+      transform: translateX(50px);
+  }
+  to{
+      opacity: 1;
+      transform: translateX(0px);
+  }
 }
 
-:root{
-    --nav-color: rgb(236, 78, 78);
-}
-
-section{
-  padding: 50px 50px 50px 50px
-}
-
-
+/*nav*/
 nav{
     display: flex;
     justify-content: space-around;
@@ -34,13 +32,11 @@ nav{
     background-color:var(--nav-color);
     font-family: "Montserrat", sans-serif;
 }
-
 .nav-links{
     display: flex;
     justify-content: space-around;
     width: 40%;
 }
-
 .nav-links a{
     color: white;
     text-decoration: none;
@@ -48,11 +44,23 @@ nav{
     font-size: 14px;
     font-weight: bold;
 }
-
 .nav-links li{
     list-style: none;
 }
+.nav-links li a::after{
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width .3s; 
+}
+.nav-links li a:hover::after{
+  width: 100%; 
+  transition: width .3s;
+}
 
+/*burger navbar*/
 .burger div{
     width: 30px; 
     height: 5px;
@@ -60,15 +68,29 @@ nav{
     margin: 3px;
     transition: all 0.3s ease;
 }
-
 .burger{display:none; cursor: pointer;}
+.nav-active{
+  transform: translateX(0%);
+}
+.toggle .line1{
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
 
+.toggle .line2{
+  opacity: 0;
+}
+
+.toggle .line3{
+  transform: rotate(45deg) translate(-5px, -6px);
+
+}
+
+/*nav media queries*/
 @media screen and (max-width: 1024px){
     .nav-links{
         width: 60%;
     }
 }
-
 @media screen and (max-width: 768px){
     body{
         overflow-x: hidden;
@@ -99,52 +121,15 @@ nav{
     }
   }
 
-.nav-active{
-    transform: translateX(0%);
-}
-
-@keyframes navLinkFade{
-    from{
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to{
-        opacity: 1;
-        transform: translateX(0px);
-    }
-}
-
-.toggle .line1{
-    transform: rotate(-45deg) translate(-5px, 6px);
-}
-
-.toggle .line2{
-    opacity: 0;
-}
-
-.toggle .line3{
-    transform: rotate(45deg) translate(-5px, -6px);
-
-}
-
+/*body*/
 body{
     background-color: rgb(223, 219, 219);
 }
-
-.nav-links li a::after{
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: white;
-    transition: width .3s; 
+section{
+  padding: 50px 50px 50px 50px;
 }
 
-.nav-links li a:hover::after{
-    width: 100%; 
-    transition: width .3s;
-}
-
+/*footer*/
 footer{
     background: #e9cece;
     padding: 30px 0;
@@ -152,9 +137,8 @@ footer{
     width: 100%;
     position: fixed;
     max-height: 20vh;
-  }
-  
-  .footer-container{
+}
+.footer-container{
     max-width: 100%;
     padding: 0 20px;
     display: flex;
@@ -163,46 +147,38 @@ footer{
     justify-content: space-around;
     align-items: center;
     max-height: 20vh;
-  }
-  
-  .footer-logo{
-    width: 180px;
-  }
-  
-  .social-media{
-    margin: 20px 0;
-  }
-  
-  .social-media a{
+}
+.footer-logo{
+  width: 180px;
+}
+.social-media{
+   margin: 20px 0;
+}
+.social-media a{
     color: #001a21;
     margin-right: 25px;
     font-size: 22px;
     text-decoration: none;
     transition: .3s linear;
-  }
-  
-  .social-media a:hover{
+}
+.social-media a:hover{
     color: #e28b8b;
-  }
-  
-  .right-col h1{
+}
+.right-col h1{
     font-size: 26px;
-  }
-
-  .border{
+}
+.border{
     width: 100%;
     height: 4px;
     background: #b63232;
-  }
-  
-  .newsletter-form{
+}
+.newsletter-form{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-  }
-  
-  .txtb{
+}
+.txtb{
     flex: 1;
     padding: 18px 40px;
     font-size: 16px;
@@ -213,9 +189,8 @@ footer{
     outline: none;
     border-radius: 30px;
     min-width: 260px;
-  }
-  
-  .btn{
+}
+.btn{
     padding: 18px 40px;
     font-size: 16px;
     color: #f1f1f1;
@@ -227,13 +202,13 @@ footer{
     margin-left: 20px;
     cursor: pointer;
     transition: opacity .3s linear;
-  }
-  
-  .btn:hover{
+}
+.btn:hover{
     opacity: .7;
-  }
-  
-  @media screen and (max-width:960px) {
+}
+
+/*footer media queries*/
+@media screen and (max-width:960px) {
     .footer-container{
       max-width: 600px;
       max-height: 100px;
@@ -245,9 +220,8 @@ footer{
     .left-col .footer-logo{
       display: none;
     }
-  }
-
-  @media screen and (max-width:700px){
+}
+@media screen and (max-width:700px){
     .btn{
       margin: 0;
       width: 100%;
@@ -273,4 +247,4 @@ footer{
 
   #checkbox{
     flex-direction: row;
-  }
+}
