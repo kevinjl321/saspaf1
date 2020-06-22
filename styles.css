@@ -44,7 +44,7 @@ nav{
     color: white;
     text-decoration: none;
     letter-spacing: 3px;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: bold;
 }
 .nav-links li{
@@ -78,11 +78,9 @@ nav{
 .toggle .line1{
   transform: rotate(-45deg) translate(-5px, 6px);
 }
-
 .toggle .line2{
   opacity: 0;
 }
-
 .toggle .line3{
   transform: rotate(45deg) translate(-5px, -6px);
 
@@ -130,6 +128,25 @@ body{
 }
 section{
   padding: 50px 50px 50px 50px;
+  min-height: 72vh;
+}
+
+/*join us!*/
+.join-container{
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
+}
+.join-us{
+  flex-direction: column;
+  align-items: left;
+}
+.join{
+  display: flex;
+  flex-direction: column;
+}
+#checkbox{
+  flex-direction: row;
 }
 
 /*footer*/
@@ -138,8 +155,8 @@ footer{
     padding: 30px 0;
     bottom: 0;
     width: 100%;
-    position: fixed;
     max-height: 20vh;
+    position: fixed;
 }
 .footer-container{
     max-width: 100%;
@@ -232,25 +249,5 @@ footer{
       margin: 0;
       width: 100%;
       margin-top: 20px;
-      }
-  }
-
-  .join-container{
-    display: flex;
-    justify-content: center;
-    margin-top: 150px;
-  }
-
-  .join-us{
-    flex-direction: column;
-    align-items: left;
-  }
-
-  .join{
-    display: flex;
-    flex-direction: column;
-  }
-
-  #checkbox{
-    flex-direction: row;
+    }
 }
