@@ -3,14 +3,15 @@
     margin: 0;
     padding: 0;
     box-sizing: borderbox;
+    font-family: "Montserrat", sans-serif;
 }
 :root{
   --nav-color: rgb(236, 78, 78);
 }
 html, body{
     overflow-x: hidden;
-    font-family: "Montserrat", sans-serif;
     margin: auto;
+    position: relative;
 }
 @keyframes navLinkFade{
   from{
@@ -33,7 +34,9 @@ nav{
     align-items: center;
     min-height: 8vh;
     background-color:var(--nav-color);
-    font-family: "Montserrat", sans-serif;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 .nav-links{
     display: flex;
@@ -100,7 +103,7 @@ nav{
         position: absolute;
         right: 0px;
         height: 92vh;
-        top: 8vh;
+        top: 6vh;
         background-color: var(--nav-color);
         display: flex;
         flex-direction: column;
@@ -124,11 +127,11 @@ nav{
 
 /*body*/
 body{
-    background-color: rgb(223, 219, 219);
+    background-color: rgb(255, 255, 255);
 }
 section{
   padding: 50px 50px 50px 50px;
-  min-height: 72vh;
+  min-height: 94vh;
 }
 
 /*join us!*/
@@ -156,7 +159,7 @@ footer{
     bottom: 0;
     width: 100%;
     max-height: 20vh;
-    position: fixed;
+    position: absolute;
 }
 .footer-container{
     max-width: 100%;
