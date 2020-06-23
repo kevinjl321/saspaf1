@@ -149,8 +149,9 @@ footer{
 }
 .social-media{
    margin: 20px 0;
+   margin-left: 25px;
 } 
-.social-media i{
+.social-media a{
     color: #001a21;
     font-size: 50px;
     text-decoration: none;
@@ -161,7 +162,7 @@ footer{
     color: #e28b8b;
 }
 .left-col h1{
-    font-size: 30px;
+    font-size: 80px;
     font-family: "Oswald", sans-serif;
     font-style: italic;
     text-align: center;
