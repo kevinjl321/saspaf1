@@ -123,33 +123,6 @@ nav{
     .burger div{
       max-height: 10vh;
     }
-  }
-
-/*body*/
-body{
-    background-color: rgb(255, 255, 255);
-}
-section{
-  padding: 50px 50px 50px 50px;
-  min-height: 94vh;
-}
-
-/*join us!*/
-.join-container{
-  display: flex;
-  justify-content: center;
-  margin-top: 150px;
-}
-.join-us{
-  flex-direction: column;
-  align-items: left;
-}
-.join{
-  display: flex;
-  flex-direction: column;
-}
-#checkbox{
-  flex-direction: row;
 }
 
 /*footer*/
@@ -253,4 +226,71 @@ footer{
       width: 100%;
       margin-top: 20px;
     }
+}
+
+/*body*/
+body{
+  background-color: rgb(255, 255, 255);
+}
+section{
+  padding: 50px 50px 50px 50px;
+  min-height: 94vh;
+}
+
+/*join us!*/
+.join{
+  display: flex;
+  flex-direction: column;
+}
+.join{
+  background: #ee9ca7;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ffdde1, #ee9ca7);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ffdde1, #ee9ca7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.join-container{
+  justify-content: center;
+  margin-top: 150px;
+  align-items: left;
+}
+.join-us input{
+  background-color: #ffffff00;
+  margin-bottom: 20px;
+  width: 80%;
+  height: 50px;
+  border: none;
+  border-bottom: 2px solid white;
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+.join-us input::placeholder{
+  font-size: 15px;
+  color: rgb(129, 98, 98);
+}
+#checkbox{
+  flex-direction: row;
+}
+#text-messages{
+  width: 25px;
+}
+#submit{
+  padding: 18px 40px;
+  font-size: 15px;
+  color: #f1f1f1;
+  background: #a1252c;
+  border: none;
+  font-weight: 700;
+  outline: none;
+  border-radius: 30px;
+  margin-left: 20px;
+  cursor: pointer;
+  transition:
+  opacity .3s linear;
+  width: 15%;
+}
+#submit:hover{
+  opacity: .7;
 }
