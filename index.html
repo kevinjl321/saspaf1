@@ -6,7 +6,6 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel = "stylesheet" href = "styles.css">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
         <link rel="icon" href="images/rsz_logo.png">
         <script src="https://use.fontawesome.com/80d6b49951.js"></script>
@@ -39,14 +38,25 @@
     </nav>
 
     <body>
+      <!--Homepage-->
+      <section class = "home-page">
+        <div id = "home">
+          <h1>We are SASPAF.</h1>
+          <p>Serving and empowering single parent
+            families across the nation.
+          </p>
+          <br><br><hr><br>
+          <button id = "learn more" onclick = "location.href = '#our-mission'" type = "button">Our Mission</button>
+        </div>
+      </section>
 
-      <section class = "join">
+      <section class = "join-us">
           <div class = "join-container">
             <div class = "join-us">
               <h1>Join Us!</h1>
               <br>
               <p>Sign up to join our team! We have periodic volunteer activities and events that you can participate in. 
-                There are also so many other ways to help, so join us!<br><br></p>
+                There are also so many other ways to help, so join us!</p>
 
               <form action = "https://getform.io/f/4b5410d2-75e8-45f7-bb9d-fdcc116e28dc" method = "POST" class = "join" >
                 <input type = "text" id = "fname" name = "fname" placeholder= "First Name" required>
@@ -76,7 +86,7 @@
     <footer>
       <div class="footer-container">
         <div class="left-col">
-          <h1>FOLLOW US</h1>
+          <img class = "footer-logo" src="images/logo.png" alt="" class="footer-logo">
           <div class="social-media">
             <a href="https://www.facebook.com/saspaf/"><i class="fab fa-facebook-f"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
@@ -85,12 +95,20 @@
             <a href="#"><i class="fab fa-linkedin-in"></i></a>
             <a href="https://greatnonprofits.org/org/support-and-assistance-for-single-parent-families"><i class="fa fa-gratipay" aria-hidden="true"></i></a>
           </div>
+          <p class="rights-text">&copy 2020 SASPAF | Non-profit Organization<br>Designed and developed by <a href = "https://www.github.com/kevinjl321">Kevin Lan</a><br></p>
         </div>
-      </div>
-      <div class = "rights">
-        <p class="rights-text">&copy 2020 Support and Assistance for Single Parent Families | Non-profit Organization<br>
-           Designed and developed by <a href = "https://www.github.com/kevinjl321">Kevin Lan</a><br>
-        <p>
+
+        <div class="right-col">
+          <h1>Keep in touch with us</h1>
+          <div class="border"></div>
+          <br>
+          <p>Enter your email to receive updates, news, and more!</p>
+          <br>
+          <form action="" class="newsletter-form">
+            <input type="text" class="txtb" placeholder="Enter your email">
+            <input type="submit" class="btn" value="Sign me up!">
+          </form>
+        </div>
       </div>
     </footer>
 
